@@ -1,0 +1,73 @@
+# ============================================================
+# 学习仓库 .gitignore  ·  2026-10-12
+# 顺序很重要：第一行是密钥，它必须在写任何代码之前就存在。
+# ============================================================
+
+# ---------- 密钥（最重要，永远放最前面）----------
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets.json
+credentials.json
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ---------- 虚拟环境 ----------
+.venv/
+venv/
+env/
+ENV/
+
+# ---------- Jupyter ----------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ---------- 测试与工具缓存 ----------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---------- 向量库与模型缓存（动辄几百 MB，别提交）----------
+chroma_db/
+chroma/
+*.faiss
+*.index
+.cache/
+models/
+*.bin
+*.safetensors
+*.gguf
+
+# ---------- 数据集（下载来的东西不进 git）----------
+data/
+*.csv
+*.parquet
+*.zip
+*.tar.gz
+
+# 如果确实有个很小的样例文件要提交，在这里单独放行：
+# !data/sample_10rows.csv
+
+# ---------- 日志与临时文件 ----------
+*.log
+logs/
+tmp/
+.DS_Store
+
+# ---------- IDE ----------
+.idea/
+.vscode/
+*.swp
