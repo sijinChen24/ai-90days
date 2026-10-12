@@ -9,11 +9,30 @@
 
 ```
 ai-90days/
-├── notebooks/     日常练习（Jupyter 里写）
-├── projects/      五个递进项目（PyCharm / Cursor 里写）
-├── notes/         学习笔记、问题清单、原理回填记录
-├── scripts/       一次性小工具
-└── data/          数据集（已在 .gitignore 中排除，不上传）
+│
+├── notebooks/                  ← 日常练习（Jupyter 里写）
+│   ├── 01-python-basics/         Python 语法复习
+│   ├── 02-numpy-pandas/          数据处理基础
+│   ├── 03-llm-api/               大模型 API 调用实验
+│   ├── 04-langchain/             LangChain / LlamaIndex
+│   └── 05-rag-agent/             RAG 与 Agent 实验
+│
+├── projects/                   ← 五个项目（PyCharm 里写，要交付）
+│   ├── 01-cli-chat/              命令行多轮问答助手
+│   ├── 02-rag-pdf/               PDF 知识库问答系统
+│   ├── 03-agent-tools/           能调工具的 Agent
+│   ├── 04-qa-system/             AI 质检 / 企业知识库 Agent
+│   └── 05-capstone/              毕业项目
+│
+├── notes/                      ← 学习笔记、问题清单、原理回填记录
+├── scripts/                    ← 一次性小工具（数据清洗、评测脚本等）
+├── data/                       ← 数据集（内容已忽略，仅保留目录本身）
+│
+├── .venv/                      ← 虚拟环境（Python 3.11.9，已忽略）
+├── .env                        ← 真实密钥（已忽略，永不提交）
+├── .env.example                ← 模板（提交，照着填）
+├── .gitignore
+└── README.md
 ```
 
 **`notebooks/` 和 `projects/` 的区别**：notebook 是**过程**，`.py` 是**交付**。
@@ -66,6 +85,9 @@ ai-90days/
 | 新建 notebook 时 | 内核选 **Python (ai-90days)** |
 | 验证内核对不对 | `import sys; print(sys.executable)` → 应指向本仓库的 `.venv` |
 | Python 版本 | 3.11.9（全局命令是 `python3`，venv 内才是 `python`） |
+
+> ⚠️ **一个仓库只用一个 IDE 打开。** 这个目录只用 **PyCharm**；Cursor / Qoder 不要同时指向它。
+> 多进程同时跑 git 会抢 `.git/index.lock`，出现莫名的提交失败。
 
 ---
 
