@@ -52,7 +52,10 @@ models/
 *.gguf
 
 # ---------- 数据集（下载来的东西不进 git）----------
-data/
+# 注意：必须写 data/* 而不是 data/
+# 否则下面的 ! 放行规则不生效（git 无法放行被整体排除的目录里的文件）
+data/*
+!data/.gitkeep
 *.csv
 *.parquet
 *.zip
