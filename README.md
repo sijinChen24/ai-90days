@@ -5,6 +5,23 @@
 
 ---
 
+## 目录结构
+
+```
+ai-90days/
+├── notebooks/     日常练习（Jupyter 里写）
+├── projects/      五个递进项目（PyCharm / Cursor 里写）
+├── notes/         学习笔记、问题清单、原理回填记录
+├── scripts/       一次性小工具
+└── data/          数据集（已在 .gitignore 中排除，不上传）
+```
+
+**`notebooks/` 和 `projects/` 的区别**：notebook 是**过程**，`.py` 是**交付**。
+一段代码如果要反复运行、给别人用、或者要进作品集，就把它挪进 `projects/` 写成 `.py`。
+留在 notebook 里的探索代码，三个月后自己都不会再看。
+
+---
+
 ## 进度
 
 | 周 | 日期 | 主题 | 交付 |
@@ -29,24 +46,26 @@
 
 | # | 项目 | 时间 | 路径 | 状态 |
 |---|---|---|---|---|
-| 一 | 命令行多轮问答助手 | D5 – D7 | `week01/project01_cli_chat/` | 未开始 |
-| 二 | PDF 知识库问答系统 | D22 – D27 | `week04/project02_rag_kb/` | 未开始 |
-| 三 | 能调工具的 Agent | D29 – D41 | `week06/project03_agent/` | 未开始 |
-| 四 | AI 质检 / 企业知识库 Agent | D43 – D50 | `week08/project04_quality/` | 未开始 |
-| 五 | 毕业项目 | D71 – D82 | `week12/project05_final/` | 未开始 |
+| 一 | 命令行多轮问答助手 | D5 – D7 | `projects/01-cli-chat/` | 未开始 |
+| 二 | PDF 知识库问答系统 | D22 – D27 | `projects/02-rag-pdf/` | 未开始 |
+| 三 | 能调工具的 Agent | D29 – D41 | `projects/03-agent-tools/` | 未开始 |
+| 四 | AI 质检 / 企业知识库 Agent | D43 – D50 | `projects/04-qa-system/` | 未开始 |
+| 五 | 毕业项目 | D71 – D82 | `projects/05-capstone/` | 未开始 |
 
 每个项目交付时必须齐四样：**能跑的代码 + 架构图 + 评测数字 + 复盘**。
 
 ---
 
-## 目录约定
+## 环境速查
 
-```
-weekNN/     每周的练习与项目，一天一个子目录
-notes/      学习笔记、问题清单、原理回填记录
-data/       数据集（已在 .gitignore 中排除）
-scripts/    一次性小工具
-```
+| 事项 | 做法 |
+|---|---|
+| 激活项目环境 | `source .venv/bin/activate` |
+| 退出环境 | `deactivate` |
+| 启动 Jupyter | **任意目录**敲 `jupyter lab`（默认就打开本仓库） |
+| 新建 notebook 时 | 内核选 **Python (ai-90days)** |
+| 验证内核对不对 | `import sys; print(sys.executable)` → 应指向本仓库的 `.venv` |
+| Python 版本 | 3.11.9（全局命令是 `python3`，venv 内才是 `python`） |
 
 ---
 
